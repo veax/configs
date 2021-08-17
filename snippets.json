@@ -1,0 +1,35 @@
+{
+	"React Native Functional Component": {
+		"prefix": "rnfc",
+		"body": [
+		"import React from 'react'",
+		"import {View, Text} from 'react-native'",
+		"",
+		"const ${1:name} = (props) => {",
+		"  return (",
+		"    <View>",
+		"      <Text>$2</Text>",
+		"    </View>",
+		"  )",
+		"};",
+		"",
+		"export default ${1:name};",
+		""
+		],
+		"description": "React Native Functional Component"
+	},
+	"React Native StyleSheet": {
+		"prefix": "rnstl",
+		"body": [
+		"import {StyleSheet} from 'react-native'",
+		"",
+		"const styles = StyleSheet.create({",
+		"",
+		"});",
+		"",
+		"export default styles;",
+		""
+		],
+		"description": "React Native StyleSheet"
+	},
+}
