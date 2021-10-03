@@ -14,10 +14,15 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
     "explorer.confirmDelete": false,
     "workbench.colorTheme": "Mokka",
     "prettier.singleQuote": true,
     "prettier.trailingComma": "none",
     "prettier.printWidth": 100,
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "debug.javascript.autoAttachFilter": "disabled"
 }
