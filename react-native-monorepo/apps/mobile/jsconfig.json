@@ -2,9 +2,6 @@
     "compilerOptions": {
       "target": "es6",
       "baseUrl": ".",
-      "paths": {
-        "@root/*": ["src/*"]
-      }
     },
     "exclude": ["node_modules"]
   }

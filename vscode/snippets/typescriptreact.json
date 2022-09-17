@@ -1,0 +1,24 @@
+{
+  "React Native Functional Component": {
+    "prefix": "rnfc",
+    "body": [
+      "import React, { ReactElement } from 'react'",
+      "import { Div, Text } from 'react-native-magnus'",
+      "",
+      "interface Props {",
+      "  prop1: string",
+      "}",
+      "",
+      "export const ${1:name}: React.FC<Props> = ({ prop1 }): ReactElement => {",
+      "  return (",
+      "    <Div>",
+      "      <Text>${1:name} {prop1}</Text>",
+      "    </Div>",
+      "  )",
+      "};",
+      "",
+      ""
+    ],
+    "description": "React Native Functional Component"
+  }
+}

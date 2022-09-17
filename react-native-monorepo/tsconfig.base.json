@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@root/*": ["./apps/mobile/src/*"],
+      "@server/*": ["./packages/server/src/*"]
+    }
+  }
+}

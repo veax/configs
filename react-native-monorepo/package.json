@@ -1,0 +1,50 @@
+{
+  "name": "@mono/root",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Vadim Borisov",
+  "license": "ISC",
+  "scripts": {
+    "mobile:metro": "yarn workspace @mono/client metro",
+    "mobile:android": "yarn workspace @mono/client android",
+    "mobile:test": "yarn workspace @mono/client test",
+    "server:run": "yarn workspace @mono/server start:dev",
+    "start:android": "yarn run mobile:android && yarn run server:run",
+    "lint-all": "eslint . --ext .ts",
+    "lint-and-fix-all": "eslint . --ext .ts --fix",
+    "prettier-format-apps": "prettier --config .prettierrc 'apps/**/*.ts' --write",
+    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
+    "prepare": "husky install"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
+    ],
+    "nohoist": [
+      "**/react",
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-**/**"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-no-relative-import-paths": "^1.4.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --quiet --cache --fix"
+    ],
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write"
+    ]
+  }
+}

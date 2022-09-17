@@ -9,16 +9,24 @@ module.exports = {
         blacklist: null,
         whitelist: null,
         safe: false,
-        allowUndefined: false,
-      },
+        allowUndefined: false
+      }
     ],
-    'react-native-reanimated/plugin',
     [
       'babel-plugin-root-import',
       {
-        rootPathPrefix: '@root',
-        rootPathSuffix: 'src',
-      },
+        paths: [
+          {
+            rootPathPrefix: '@root',
+            rootPathSuffix: './src'
+          },
+          {
+            rootPathPrefix: '@assets',
+            rootPathSuffix: './assets'
+          }
+        ]
+      }
     ],
-  ],
-};
+    ['react-native-reanimated/plugin']
+  ]
+}

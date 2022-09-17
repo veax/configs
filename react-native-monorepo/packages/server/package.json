@@ -1,0 +1,29 @@
+{
+  "name": "@mono/server",
+  "version": "0.0.1",
+  "author": "Vadim Borisov",
+  "license": "ISC",
+  "private": true,
+  "main": "./src/server.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "start:dev": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start:prod": "npm run build && NODE_ENV=production node ./dist/server.js",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
+    "api-client-gen": "openapi --input ./src/api/openapi.yaml --output ../common/src/typescript-client"
+  },
+  "dependencies": {
+    "@mono/common": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.4.2"
+  }
+}
