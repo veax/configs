@@ -2,6 +2,7 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.semi": false,
+    "prettier.singleQuote": true,
     "workbench.iconTheme": "vscode-great-icons",
     "editor.fontSize": 13,
     "workbench.colorTheme": "One Dark Pro",
